@@ -17,6 +17,8 @@ Route::group(['prefix'=>'User'],function(){
 
 	Route::post('updatePass','UserController@updatePass');
 
+	Route::post('updateUser','UserController@updateUser');
+
 });
 
 //------------------------------MENU-----------------------

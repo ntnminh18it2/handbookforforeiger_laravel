@@ -20,6 +20,16 @@ class UserController extends Controller
         }
     }
 
+    public function updateUser(Request $request){
+
+        $table = user::where("id",$request['id'])->update(['name'=>$request['name'],'email'=>$request['email'],'phone'=>$request['phone'],'age'=>$request['age'],'gender'=>$request['gender']]);
+        if($table){
+            echo "Successfully";
+        }else{
+            echo "Err update";
+        }
+    }
+
 
     public function register(Request $request)
     {
